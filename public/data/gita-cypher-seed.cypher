@@ -1,5 +1,5 @@
-// GitaViswa (गीताविश्व) — Neo4j seed · generated 2026-10-29T16:53:19.046Z
-// 857 nodes, 5350 relationships. Run in Neo4j Browser or: cypher-shell -f gita-cypher-seed.cypher
+// GitaViswa (गीताविश्व) — Neo4j seed · generated 2026-11-10T15:06:56.272Z
+// 860 nodes, 5375 relationships. Run in Neo4j Browser or: cypher-shell -f gita-cypher-seed.cypher
 
 CREATE CONSTRAINT chapter_id IF NOT EXISTS FOR (n:Chapter) REQUIRE n.id IS UNIQUE;
 CREATE CONSTRAINT verse_id IF NOT EXISTS FOR (n:Verse) REQUIRE n.id IS UNIQUE;
@@ -800,6 +800,7 @@ UNWIND [
   {id: "concept:anugraha", label: "Anugraha", sa: "अनुग्रह", iast: "anugraha", en: "Divine Grace", category: "devotion", desc: "The Divine's compassionate grace that dispels darkness from within (10.11) and by which the devotee attains the eternal abode (18.56)."},
   {id: "concept:smarana", label: "Smaraṇa", sa: "स्मरण", iast: "smaraṇa", en: "Remembrance", category: "devotion", desc: "Constant remembrance, especially at life's end: 'whatever state one remembers on leaving the body, to that one goes' (8.6). 'Remember me and fight' (8.7)."},
   {id: "concept:om", label: "Oṃ", sa: "ॐ", iast: "oṃ", en: "The Sacred Syllable", category: "devotion", desc: "The one-syllabled Brahman (8.13), 'praṇava in all the Vedas' (7.8) — and the opening of 'oṃ tat sat', the threefold designation of the Absolute (17.23)."},
+  {id: "concept:yoga-kshema", label: "Yogakṣema", sa: "योगक्षेम", iast: "yogakṣema", en: "Provision & Preservation", category: "devotion", desc: "The pair the Lord takes upon himself for the single-hearted: yoga — what one lacks and must acquire — and kṣema — what one already holds and must keep. 'To those ever united with me, I carry what they lack and preserve what they have' (9.22). The Gita's direct answer to material insecurity."},
   {id: "concept:yoga", label: "Yoga", sa: "योग", iast: "yoga", en: "Union & Discipline", category: "practice", desc: "Defined three ways: 'evenness of mind is yoga' (2.48), 'yoga is skill in action' (2.50), and 'the severance of union with sorrow' (6.23)."},
   {id: "concept:dhyana", label: "Dhyāna", sa: "ध्यान", iast: "dhyāna", en: "Meditation", category: "practice", desc: "Meditative absorption. Chapter 6 gives the method — a clean seat, steady posture, gaze fixed, mind on the Self — 'like a lamp in a windless place' (6.19)."},
   {id: "concept:abhyasa", label: "Abhyāsa", sa: "अभ्यास", iast: "abhyāsa", en: "Persistent Practice", category: "practice", desc: "Repeated, patient effort. With vairāgya it is Krishna's answer to the restless mind: 'it is restrained by practice and dispassion' (6.35)."},
@@ -861,6 +862,7 @@ UNWIND [
   {id: "emotion:chanchalata", label: "Cāñcalya", sa: "चाञ्चल्य", iast: "cāñcalya", en: "Restless Mind", valence: "afflictive", guna: "rajas", desc: "'The mind is restless, turbulent, strong and obstinate; I think it as hard to control as the wind' (6.34).", modern: "Distractibility, racing thoughts, inattention", lexicon: ["restless", "distracted", "can't focus", "scattered", "racing thoughts", "monkey mind", "procrastinate", "procrastination", "attention", "can't concentrate", "mind wanders", "adhd"]},
   {id: "emotion:pramada", label: "Pramāda", sa: "प्रमाद", iast: "pramāda", en: "Lethargy & Negligence", valence: "afflictive", guna: "tamas", desc: "Heedlessness, indolence and sleep — the binding marks of tamas (14.8), whose happiness 'deludes the self from beginning to end' (18.39).", modern: "Burnout-fatigue, apathy, avoidance", lexicon: ["lazy", "lethargic", "unmotivated", "tired", "exhausted", "burnout", "burned out", "burnt out", "no energy", "sleep all day", "can't get up", "drained", "apathy", "fatigue"]},
   {id: "emotion:dukha", label: "Duḥkha", sa: "दुःख", iast: "duḥkha", en: "Suffering", valence: "afflictive", guna: "rajas", desc: "Pain in all its forms. Yoga is 'the severance of union with sorrow' (6.23); pleasures born of contact are 'wombs of sorrow' (5.22).", modern: "Pain, suffering, chronic distress", lexicon: ["pain", "suffering", "hurt", "agony", "misery", "chronic", "illness", "sick", "ache", "trauma"]},
+  {id: "emotion:asahaya", label: "Asahāya", sa: "असहाय", iast: "asahāya", en: "Helplessness & Being Unsupported", valence: "afflictive", guna: "tamas", desc: "The sense of having no means and no one to lean on — Arjuna's 'I am not able to stand, my mind whirls' (1.30) and his plea to be taught because he cannot see his way (2.7). Not a single word in the Gita's own vocabulary: the state is portrayed, and answered not by reassurance but by the promise that the Lord carries what the devotee lacks (9.22).", modern: "Helplessness, unsupported, no one to turn to, out of options, overwhelmed alone", lexicon: ["helpless", "no one to", "nobody to help", "alone in this", "no support", "unsupported", "on my own", "can't cope", "nothing left to try", "at the end of my rope", "no options"]},
   {id: "emotion:shanti", label: "Śānti", sa: "शान्ति", iast: "śānti", en: "Inner Peace", valence: "healing", guna: "sattva", desc: "Peace that comes not from fulfilling desires but from their quieting: 'as rivers enter the full ocean… that person attains peace' (2.70).", modern: "Calm, settledness, inner peace", lexicon: ["peace", "calm", "peaceful", "settled", "serene", "quiet mind"]},
   {id: "emotion:abhaya", label: "Abhaya", sa: "अभय", iast: "abhaya", en: "Fearlessness", valence: "healing", guna: "sattva", desc: "First of the divine endowments (16.1). Krishna's closing assurance 'do not grieve' (18.66) is the seal of fearlessness.", modern: "Courage, psychological safety", lexicon: ["courage", "brave", "fearless", "confident"]},
   {id: "emotion:shraddha", label: "Śraddhā", sa: "श्रद्धा", iast: "śraddhā", en: "Faith & Trust", valence: "healing", guna: "sattva", desc: "'The one with faith attains knowledge… and soon attains supreme peace' (4.39). A person is 'made of faith' (17.3).", modern: "Trust, conviction, hope", lexicon: ["faith", "trust", "believe", "hope", "god", "pray", "prayer", "spiritual"]},
@@ -897,7 +899,8 @@ UNWIND [
   {id: "dilemma:work-life-balance", label: "Work-Life Balance", sa: "युक्तचेष्टा", desc: "Overcommitment, neglect of body and relationships, or the opposite — avoidance.", keywords: ["work life balance", "overtime", "no time", "family time", "sleep", "health", "balance", "busy", "workaholic", "rest"]},
   {id: "dilemma:criticism-praise", label: "Coping with Criticism & Praise", sa: "निन्दास्तुति", desc: "Being shaken by feedback, reviews, public opinion — or needing applause.", keywords: ["criticism", "criticized", "criticised", "feedback", "praise", "reviews", "judged", "what people think", "reputation", "insulted", "humiliated", "trolled", "approval"]},
   {id: "dilemma:faith-crisis", label: "Spiritual Doubt & Crisis of Faith", sa: "श्रद्धासङ्कट", desc: "Losing faith, wondering if the path is real, if effort counts, if anyone listens.", keywords: ["faith", "god", "does god exist", "spiritual", "religion", "pray", "prayers unanswered", "doubt god", "meaningless", "atheist", "lost faith", "spiritual path"]},
-  {id: "dilemma:setbacks", label: "Starting Over after Setbacks", sa: "पुनरारम्भ", desc: "Failed attempts, relapses, broken streaks — and the courage to begin again.", keywords: ["start over", "setback", "relapse", "failed again", "second chance", "fresh start", "rebuild", "comeback", "gave up before", "try again"]}
+  {id: "dilemma:setbacks", label: "Starting Over after Setbacks", sa: "पुनरारम्भ", desc: "Failed attempts, relapses, broken streaks — and the courage to begin again.", keywords: ["start over", "setback", "relapse", "failed again", "second chance", "fresh start", "rebuild", "comeback", "gave up before", "try again"]},
+  {id: "dilemma:livelihood-money", label: "Money, Livelihood & Security", sa: "अर्थचिन्ता", desc: "Earning, keeping and losing — the anxious arithmetic of 'enough'. The Gita is blunt about the acquisitive mind (16.13–16.15) and equally direct about the remedy: the claim is on the work rather than its payment (2.47), and the one who trusts is carried — what is lacking supplied, what is held preserved (9.22).", keywords: ["money", "salary", "pay", "income", "job", "bills", "debt", "savings", "afford", "raise", "financial", "security", "enough money", "expensive", "cost of living", "mortgage", "rent", "laid off", "income loss"]}
 ] AS row
 MERGE (n:LifeDilemma {id: row.id}) SET n += row;
 
@@ -3357,6 +3360,7 @@ UNWIND [
   {s: "BG_2.44", t: "concept:atman", weight: 2, terms: ["व्यवसायात्मिका", "vyavasāya-ātmikā"]},
   {s: "BG_2.44", t: "concept:manas", terms: ["तयापहृतचेतसाम्"]},
   {s: "BG_2.44", t: "concept:buddhi", terms: ["बुद्धिः"]},
+  {s: "BG_2.45", t: "concept:yoga-kshema", terms: ["निर्योगक्षेम"]},
   {s: "BG_2.45", t: "concept:yoga", terms: ["निर्योगक्षेम"]},
   {s: "BG_2.45", t: "concept:atman", weight: 2, terms: ["आत्मवान्", "ātma-vān"]},
   {s: "BG_2.45", t: "concept:gunas", weight: 2, terms: ["त्रैगुण्यविषया", "निस्त्रैगुण्यो"]},
@@ -3813,13 +3817,13 @@ UNWIND [
   {s: "BG_8.1", t: "concept:moksha", terms: ["किमुच्यते"]},
   {s: "BG_8.2", t: "concept:yajna", terms: ["अधियज्ञः"]},
   {s: "BG_8.2", t: "concept:smarana", terms: ["प्रयाणकाले"]},
-  {s: "BG_8.2", t: "concept:atman", weight: 2, terms: ["नियतात्मभिः", "niyata-ātmabhiḥ"]},
-  {s: "BG_8.3", t: "concept:karma", terms: ["कर्मसंज्ञितः"]}
+  {s: "BG_8.2", t: "concept:atman", weight: 2, terms: ["नियतात्मभिः", "niyata-ātmabhiḥ"]}
 ] AS row
 MATCH (a:Verse {id: row.s}), (b:SanskritConcept {id: row.t})
 MERGE (a)-[r:MENTIONS_CONCEPT]->(b) SET r += row { .*, s: null, t: null };
 
 UNWIND [
+  {s: "BG_8.3", t: "concept:karma", terms: ["कर्मसंज्ञितः"]},
   {s: "BG_8.3", t: "concept:atman", terms: ["स्वभावोऽध्यात्ममुच्यते"]},
   {s: "BG_8.3", t: "concept:brahman", terms: ["ब्रह्म"]},
   {s: "BG_8.3", t: "concept:akshara", weight: 2, terms: ["अक्षरं", "akṣharam"]},
@@ -3912,6 +3916,7 @@ UNWIND [
   {s: "BG_9.21", t: "concept:dharma", terms: ["त्रयीधर्ममनुप्रपन्ना"]},
   {s: "BG_9.21", t: "concept:sharanagati", terms: ["त्रयीधर्ममनुप्रपन्ना"]},
   {s: "BG_9.22", t: "concept:ananya-bhakti", terms: ["अनन्याश्चिन्तयन्तो"]},
+  {s: "BG_9.22", t: "concept:yoga-kshema", terms: ["योगक्षेमं"]},
   {s: "BG_9.22", t: "concept:yoga", terms: ["योगक्षेमं"]},
   {s: "BG_9.23", t: "concept:bhakti", terms: ["भक्ता"]},
   {s: "BG_9.24", t: "concept:yajna", terms: ["सर्वयज्ञानां"]},
@@ -4317,14 +4322,14 @@ UNWIND [
   {s: "BG_17.12", t: "concept:rajas", terms: ["rājasam"]},
   {s: "BG_17.13", t: "concept:yajna", terms: ["यज्ञं"]},
   {s: "BG_17.13", t: "concept:tamas", terms: ["tāmasam"]},
-  {s: "BG_17.14", t: "concept:ahimsa", terms: ["ब्रह्मचर्यमहिंसा"]},
-  {s: "BG_17.14", t: "concept:brahman", terms: ["ब्रह्मचर्यमहिंसा"]},
-  {s: "BG_17.15", t: "concept:satya", terms: ["सत्यं"]}
+  {s: "BG_17.14", t: "concept:ahimsa", terms: ["ब्रह्मचर्यमहिंसा"]}
 ] AS row
 MATCH (a:Verse {id: row.s}), (b:SanskritConcept {id: row.t})
 MERGE (a)-[r:MENTIONS_CONCEPT]->(b) SET r += row { .*, s: null, t: null };
 
 UNWIND [
+  {s: "BG_17.14", t: "concept:brahman", terms: ["ब्रह्मचर्यमहिंसा"]},
+  {s: "BG_17.15", t: "concept:satya", terms: ["सत्यं"]},
   {s: "BG_17.16", t: "concept:atman", weight: 2, terms: ["मौनमात्मविनिग्रहः", "ātma-vinigrahaḥ"]},
   {s: "BG_17.16", t: "concept:moksha", terms: ["मानसमुच्यते"]},
   {s: "BG_17.16", t: "concept:manas", terms: ["मनःप्रसादः"]},
@@ -4718,6 +4723,7 @@ UNWIND [
   {s: "BG_8.13", t: "concept:om"},
   {s: "BG_17.23", t: "concept:om"},
   {s: "BG_17.24", t: "concept:om"},
+  {s: "BG_9.22", t: "concept:yoga-kshema"},
   {s: "BG_2.48", t: "concept:yoga"},
   {s: "BG_2.50", t: "concept:yoga"},
   {s: "BG_6.23", t: "concept:yoga"},
@@ -5483,7 +5489,11 @@ UNWIND [
   {s: "BG_18.39", t: "emotion:pramada"},
   {s: "BG_5.22", t: "emotion:dukha"},
   {s: "BG_8.15", t: "emotion:dukha"},
-  {s: "BG_18.8", t: "emotion:dukha"}
+  {s: "BG_18.8", t: "emotion:dukha"},
+  {s: "BG_1.30", t: "emotion:asahaya"},
+  {s: "BG_1.46", t: "emotion:asahaya"},
+  {s: "BG_2.7", t: "emotion:asahaya"},
+  {s: "BG_6.5", t: "emotion:asahaya"}
 ] AS row
 MATCH (a:Verse {id: row.s}), (b:Emotion {id: row.t})
 MERGE (a)-[r:DEPICTS_STATE]->(b) SET r += row { .*, s: null, t: null };
@@ -5603,7 +5613,12 @@ UNWIND [
   {s: "BG_2.65", t: "emotion:dukha"},
   {s: "BG_6.22", t: "emotion:dukha"},
   {s: "BG_6.23", t: "emotion:dukha"},
-  {s: "BG_14.20", t: "emotion:dukha"}
+  {s: "BG_14.20", t: "emotion:dukha"},
+  {s: "BG_6.5", t: "emotion:asahaya"},
+  {s: "BG_9.22", t: "emotion:asahaya"},
+  {s: "BG_9.31", t: "emotion:asahaya"},
+  {s: "BG_12.7", t: "emotion:asahaya"},
+  {s: "BG_18.66", t: "emotion:asahaya"}
 ] AS row
 MATCH (a:Verse {id: row.s}), (b:Emotion {id: row.t})
 MERGE (a)-[r:HEALS]->(b) SET r += row { .*, s: null, t: null };
@@ -5936,7 +5951,13 @@ UNWIND [
   {s: "BG_6.43", t: "dilemma:setbacks", why: "There they regain the wisdom of their former life and strive again."},
   {s: "BG_6.45", t: "dilemma:setbacks", why: "Striving with diligence, perfected through many lives, they reach the highest goal."},
   {s: "BG_6.5", t: "dilemma:setbacks", why: "Raise yourself by yourself."},
-  {s: "BG_2.3", t: "dilemma:setbacks", why: "Shake off this petty weakness of heart and arise."}
+  {s: "BG_2.3", t: "dilemma:setbacks", why: "Shake off this petty weakness of heart and arise."},
+  {s: "BG_16.13", t: "dilemma:livelihood-money", why: "'This I have gained today; this I shall gain tomorrow' — the mind that can never arrive."},
+  {s: "BG_16.14", t: "dilemma:livelihood-money", why: "'That enemy is slain; I shall slay the rest. I am the lord, the enjoyer' — wealth as the measure of the self."},
+  {s: "BG_16.15", t: "dilemma:livelihood-money", why: "'I am rich and well-born; who else is like me?' — the comparison that feeds the anxiety."},
+  {s: "BG_2.47", t: "dilemma:livelihood-money", why: "The claim is on the action, not on what it pays."},
+  {s: "BG_9.22", t: "dilemma:livelihood-money", why: "To the single-hearted, the Lord carries what is lacking and preserves what is held."},
+  {s: "BG_12.12", t: "dilemma:livelihood-money", why: "Renouncing the fruit of action brings peace at once — not after the money is settled."}
 ] AS row
 MATCH (a:Verse {id: row.s}), (b:LifeDilemma {id: row.t})
 MERGE (a)-[r:ADDRESSES_DILEMMA]->(b) SET r += row { .*, s: null, t: null };
@@ -5992,7 +6013,11 @@ UNWIND [
   {s: "dilemma:faith-crisis", t: "emotion:vishada"},
   {s: "dilemma:setbacks", t: "emotion:vishada"},
   {s: "dilemma:setbacks", t: "emotion:samshaya"},
-  {s: "dilemma:setbacks", t: "emotion:klaibya"}
+  {s: "dilemma:setbacks", t: "emotion:klaibya"},
+  {s: "dilemma:livelihood-money", t: "emotion:chinta"},
+  {s: "dilemma:livelihood-money", t: "emotion:lobha"},
+  {s: "dilemma:livelihood-money", t: "emotion:bhaya"},
+  {s: "dilemma:livelihood-money", t: "emotion:asahaya"}
 ] AS row
 MATCH (a:LifeDilemma {id: row.s}), (b:Emotion {id: row.t})
 MERGE (a)-[r:EVOKES_STATE]->(b) SET r += row { .*, s: null, t: null };
@@ -6062,7 +6087,10 @@ UNWIND [
   {s: "dilemma:faith-crisis", t: "concept:jnana"},
   {s: "dilemma:setbacks", t: "concept:abhyasa"},
   {s: "dilemma:setbacks", t: "concept:yoga"},
-  {s: "dilemma:setbacks", t: "concept:karma-yoga"}
+  {s: "dilemma:setbacks", t: "concept:karma-yoga"},
+  {s: "dilemma:livelihood-money", t: "concept:nishkama-karma"},
+  {s: "dilemma:livelihood-money", t: "concept:yoga-kshema"},
+  {s: "dilemma:livelihood-money", t: "concept:tyaga"}
 ] AS row
 MATCH (a:LifeDilemma {id: row.s}), (b:SanskritConcept {id: row.t})
 MERGE (a)-[r:RESOLVED_THROUGH]->(b) SET r += row { .*, s: null, t: null };

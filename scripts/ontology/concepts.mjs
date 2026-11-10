@@ -122,6 +122,9 @@ export const CONCEPTS = [
   { id: "om", sa: "ॐ", iast: "oṃ", en: "The Sacred Syllable", cat: "devotion",
     desc: "The one-syllabled Brahman (8.13), 'praṇava in all the Vedas' (7.8) — and the opening of 'oṃ tat sat', the threefold designation of the Absolute (17.23).",
     deva: /ॐ|[ओो]मित्य|[ओो]ंकार|[ओो]ङ्कार|प्रणव/, defines: ["7.8", "8.13", "17.23", "17.24"] },
+  { id: "yoga-kshema", sa: "योगक्षेम", iast: "yogakṣema", en: "Provision & Preservation", cat: "devotion",
+    desc: "The pair the Lord takes upon himself for the single-hearted: yoga — what one lacks and must acquire — and kṣema — what one already holds and must keep. 'To those ever united with me, I carry what they lack and preserve what they have' (9.22). The Gita's direct answer to material insecurity.",
+    deva: /योगक्षेम/, defines: ["9.22"] },
 
   // ── Discipline & Practice ──────────────────────────────────────────────────
   { id: "yoga", sa: "योग", iast: "yoga", en: "Union & Discipline", cat: "practice",

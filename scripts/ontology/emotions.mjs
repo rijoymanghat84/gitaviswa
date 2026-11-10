@@ -149,6 +149,11 @@ export const EMOTIONS = [
     deva: /दुःख/,
     depicts: ["5.22", "8.15", "18.8"], heals: ["2.14", "2.15", "2.56", "2.65", "6.22", "6.23", "14.20"],
     lexicon: ["pain", "suffering", "hurt", "agony", "misery", "chronic", "illness", "sick", "ache", "trauma"] },
+  { id: "asahaya", sa: "असहाय", iast: "asahāya", en: "Helplessness & Being Unsupported", valence: "afflictive", guna: "tamas",
+    desc: "The sense of having no means and no one to lean on — Arjuna's 'I am not able to stand, my mind whirls' (1.30) and his plea to be taught because he cannot see his way (2.7). Not a single word in the Gita's own vocabulary: the state is portrayed, and answered not by reassurance but by the promise that the Lord carries what the devotee lacks (9.22).",
+    modern: "Helplessness, unsupported, no one to turn to, out of options, overwhelmed alone",
+    depicts: ["1.30", "1.46", "2.7", "6.5"], heals: ["6.5", "9.22", "9.31", "12.7", "18.66"],
+    lexicon: ["helpless", "no one to", "nobody to help", "alone in this", "no support", "unsupported", "on my own", "can't cope", "nothing left to try", "at the end of my rope", "no options"] },
 
   // ── Healing ────────────────────────────────────────────────────────────────
   { id: "shanti", sa: "शान्ति", iast: "śānti", en: "Inner Peace", valence: "healing", guna: "sattva",

@@ -264,4 +264,15 @@ export const DILEMMAS = [
       ["6.45", "Striving with diligence, perfected through many lives, they reach the highest goal."],
       ["6.5", "Raise yourself by yourself."],
       ["2.3", "Shake off this petty weakness of heart and arise."]] },
+  { id: "livelihood-money", en: "Money, Livelihood & Security", sa: "अर्थचिन्ता",
+    desc: "Earning, keeping and losing — the anxious arithmetic of 'enough'. The Gita is blunt about the acquisitive mind (16.13–16.15) and equally direct about the remedy: the claim is on the work rather than its payment (2.47), and the one who trusts is carried — what is lacking supplied, what is held preserved (9.22).",
+    keywords: ["money", "salary", "pay", "income", "job", "bills", "debt", "savings", "afford", "raise", "financial", "security", "enough money", "expensive", "cost of living", "mortgage", "rent", "laid off", "income loss"],
+    emotions: ["chinta", "lobha", "bhaya", "asahaya"], concepts: ["nishkama-karma", "yoga-kshema", "tyaga"],
+    verses: [
+      ["16.13", "'This I have gained today; this I shall gain tomorrow' — the mind that can never arrive."],
+      ["16.14", "'That enemy is slain; I shall slay the rest. I am the lord, the enjoyer' — wealth as the measure of the self."],
+      ["16.15", "'I am rich and well-born; who else is like me?' — the comparison that feeds the anxiety."],
+      ["2.47", "The claim is on the action, not on what it pays."],
+      ["9.22", "To the single-hearted, the Lord carries what is lacking and preserves what is held."],
+      ["12.12", "Renouncing the fruit of action brings peace at once — not after the money is settled."]] },
 ];
