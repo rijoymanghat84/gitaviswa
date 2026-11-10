@@ -19,6 +19,7 @@ import { verifyGraph } from "./lib/verify.mjs";
 import { CONCEPTS, CONCEPT_CATEGORIES } from "./ontology/concepts.mjs";
 import { EMOTIONS, CAUSAL_CHAINS, ANTIDOTES } from "./ontology/emotions.mjs";
 import { DILEMMAS } from "./ontology/dilemmas.mjs";
+import { LOCAL_ADDITIONS } from "./ontology/local-additions.mjs";
 import { CHARACTERS, SPEAKER_OVERRIDES, LISTENERS } from "./ontology/characters.mjs";
 import { DIALOGUES, THREADS, CHAPTER_THEMES, ANCHORS } from "./ontology/curated.mjs";
 
@@ -484,7 +485,10 @@ for (const [healer, afflict, ref] of ANTIDOTES) {
 // Life dilemmas
 const dilemmaId = (id) => `dilemma:${id}`;
 for (const d of DILEMMAS) {
-  nodes.push({ id: dilemmaId(d.id), type: "LifeDilemma", label: d.en, sa: d.sa, desc: d.desc, keywords: d.keywords });
+  const local = LOCAL_ADDITIONS[d.id] || {};
+  nodes.push({ id: dilemmaId(d.id), type: "LifeDilemma", label: d.en, sa: d.sa, desc: d.desc, keywords: d.keywords,
+    ...(local.practice ? { practice: local.practice } : {}),
+    ...(local.shelf?.length ? { shelf: local.shelf } : {}) });
   for (const [ref, why] of d.verses) addEdge("ADDRESSES_DILEMMA", mustVerse(ref, `dilemma ${d.id}`), dilemmaId(d.id), { why });
   for (const e of d.emotions) addEdge("EVOKES_STATE", dilemmaId(d.id), needNode(emotionId(e), d.id));
   for (const c of d.concepts) addEdge("RESOLVED_THROUGH", dilemmaId(d.id), needNode(conceptId(c), d.id));

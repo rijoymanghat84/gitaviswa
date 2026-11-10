@@ -30,8 +30,11 @@ export interface ConceptNode extends GraphNodeBase {
 export interface EmotionNode extends GraphNodeBase {
   type: "Emotion"; sa: string; iast: string; en: string; valence: "afflictive" | "healing"; guna: string; desc: string; modern: string; lexicon: string[];
 }
+export interface ShelfBook { title: string; author: string; year?: number; level?: string; owned?: boolean; lens?: string }
 export interface DilemmaNode extends GraphNodeBase {
   type: "LifeDilemma"; sa: string; desc: string; keywords: string[];
+  /** One actionable line, and the books actually on hand. Local additions; absent upstream. */
+  practice?: string; shelf?: ShelfBook[];
 }
 export interface PersonalThoughtNode extends GraphNodeBase {
   type: "PersonalThought"; text: string; createdAt: number;

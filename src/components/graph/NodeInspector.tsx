@@ -160,6 +160,28 @@ export function NodeInspector({ nodeId, onClose }: { nodeId: string; onClose: ()
         </div>
 
         {desc && n.type !== "PersonalThought" && <p className="reading mt-5">{desc}</p>}
+        {n.type === "LifeDilemma" && n.practice && (
+          <section className="mt-6">
+            <SectionLabel>What to do</SectionLabel>
+            <p className="reading">{n.practice}</p>
+          </section>
+        )}
+        {n.type === "LifeDilemma" && !!n.shelf?.length && (
+          <section className="mt-6">
+            <SectionLabel>On your shelf</SectionLabel>
+            <ul className="mt-1.5 space-y-2.5">
+              {n.shelf.map((b) => (
+                <li key={`${b.title}|${b.author}`}>
+                  <div className="text-[13px] font-medium leading-5 text-text">{b.title}</div>
+                  <div className="num text-[11px] text-text-3">
+                    {b.author}{b.year ? ` · ${b.year}` : ""}{b.owned ? " · owned" : ""}{b.level ? ` · ${b.level}` : ""}
+                  </div>
+                  {b.lens && <p className="mt-0.5 text-[12px] leading-[1.5] text-text-2">{b.lens}</p>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
         {n.type === "PersonalThought" && <ThoughtDetail nodeId={n.id} />}
         {n.type === "Emotion" && n.modern && (
           <p className="mt-3 text-[13px] leading-5 text-text-3">
